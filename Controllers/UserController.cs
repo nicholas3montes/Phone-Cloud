@@ -15,6 +15,7 @@ namespace Phone_Cloud.Controllers
 
         private readonly DbUserContext _context;
 
+
         public UserController(IUserRepository repository, DbUserContext context)
         {
             _repository = repository;
@@ -31,13 +32,14 @@ namespace Phone_Cloud.Controllers
         }
 
 
-        [HttpGet]
-        public async Task<IActionResult> Get(User id)
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(Guid id)
         {
-            _repository.GetById(id);
-            return await _repository.SaveChangesAsync()
-                    ? Ok("Usuário encontrado!")
-                    : BadRequest("Erro não foi possivel encontrar o usuario");
+            var user = await _repository.GetById(id);
+            return user != null
+                    ? Ok(user)
+                    : NotFound("Usuario não encontrado");
         }
     }
 }

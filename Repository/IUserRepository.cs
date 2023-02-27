@@ -7,5 +7,8 @@ namespace Phone_Cloud.Repository
     {
         void Add(User user);
         Task<bool> SaveChangesAsync();
+
+        Task<User> GetById(Guid id);
+
     }
 }
