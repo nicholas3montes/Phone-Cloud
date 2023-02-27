@@ -34,7 +34,7 @@ namespace Phone_Cloud.Controllers
 
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(Guid id)
+        public async Task<IActionResult> Get(int id)
         {
             var user = await _repository.GetById(id);
             return user != null

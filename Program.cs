@@ -19,7 +19,7 @@ internal class Program
 
         builder.Services.AddEntityFrameworkNpgsql()
             .AddDbContext<DbUserContext>(
-                options => options.UseNpgsql("Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=inicial1234"));
+                options => options.UseNpgsql("Host=dbuser.crxdkeqr85op.us-east-1.rds.amazonaws.com;Port=5432;Database=postgres;Username=postgres;Password=inicial1234"));
 
         builder.Services.AddScoped<IUserRepository, UserRepository>();
 
