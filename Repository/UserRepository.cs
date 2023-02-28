@@ -19,27 +19,27 @@ namespace Phone_Cloud.Repositories
             _context.Add(user);
         }
 
-        //        public IQueryable<User> GetAll()
-        //        {
-        //            return _context.Users;
-        //        }
+
+        public async Task<List<User>> GetAll()
+        {
+            return await _context.Users.ToListAsync();
+        }
+
         public async Task<User> GetById(int id)
         {
             return await _context.Users.FindAsync(id);
         }
 
-        //        public void Update(User user)
-        //        {
-        //            _context.Users.Update(user);
-        //            _context.SaveChanges();
-        //        }
-        //
-        //        public void Delete(User user)
-        //        {
-        //            _context.Users.Remove(user);
-        //            _context.SaveChanges();
-        //        }
-        //
+        public async Task<User> Update(User user)
+        {
+            return _context.Users.Update(user);
+        }
+
+        public async Task<User> Delete(int id)
+        {
+            return _context.Users.Remove(_context.Users.Find(id));
+        }
+
         public async Task<bool> SaveChangesAsync()
         {
             return await _context.SaveChangesAsync() > 0;

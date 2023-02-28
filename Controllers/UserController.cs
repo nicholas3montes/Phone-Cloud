@@ -41,5 +41,27 @@ namespace Phone_Cloud.Controllers
                     ? Ok(user)
                     : NotFound("Usuario não encontrado");
         }
+
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var user = await _repository.GetAll();
+            return user != null
+                    ? Ok(user)
+                    : NotFound("Não há usuários salvos no banco de dados!");
+        }
+
+        [HttpDelete("{1}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var user = await _repository.Delete(id);
+            return user != null
+                    ? Ok(user)
+                    : NotFound("Não há usuários salvos no banco de dados!");
+        }
+
+
+
     }
 }

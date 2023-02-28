@@ -10,5 +10,9 @@ namespace Phone_Cloud.Repository
 
         Task<User> GetById(int id);
 
+        Task<User> Delete(int id);
+
+        Task<List<User>> GetAll();
+
     }
 }
