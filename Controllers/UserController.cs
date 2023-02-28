@@ -61,7 +61,23 @@ namespace Phone_Cloud.Controllers
                     : NotFound("Não há usuários salvos no banco de dados!");
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, User user)
+        {   
+            if (id != user.Id)
+            {
+                return BadRequest();
+            }
+            
+            var updatedUser = await _repository.Update(user);
 
+            if (updatedUser == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(updatedUser);
+        }
 
     }
 }

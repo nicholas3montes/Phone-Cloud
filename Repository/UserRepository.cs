@@ -22,22 +22,27 @@ namespace Phone_Cloud.Repositories
 
         public async Task<List<User>> GetAll()
         {
-            return await _context.Users.ToListAsync();
+            return await _context.Users.OrderBy(user => user.Id).ToListAsync();
         }
 
         public async Task<User> GetById(int id)
         {
-            return await _context.Users.FindAsync(id);
+            return await _context.Users.Where(idUser => idUser.Id == id).FirstOrDefaultAsync();
         }
 
         public async Task<User> Update(User user)
         {
-            return _context.Users.Update(user);
+            _context.Users.Update(user);    
+            await _context.SaveChangesAsync();
+            return user;
         }
 
         public async Task<User> Delete(int id)
         {
-            return _context.Users.Remove(_context.Users.Find(id));
+            var user = await _context.Users.FindAsync(id);
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+            return user;
         }
 
         public async Task<bool> SaveChangesAsync()

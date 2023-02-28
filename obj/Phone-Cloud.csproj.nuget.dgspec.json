@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/nicholas/Phone-Cloud/Phone-Cloud.csproj": {}
+    "/home/nicholas/Documentos/Phone-Cloud/Phone-Cloud.csproj": {}
   },
   "projects": {
-    "/home/nicholas/Phone-Cloud/Phone-Cloud.csproj": {
+    "/home/nicholas/Documentos/Phone-Cloud/Phone-Cloud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nicholas/Phone-Cloud/Phone-Cloud.csproj",
+        "projectUniqueName": "/home/nicholas/Documentos/Phone-Cloud/Phone-Cloud.csproj",
         "projectName": "Phone-Cloud",
-        "projectPath": "/home/nicholas/Phone-Cloud/Phone-Cloud.csproj",
+        "projectPath": "/home/nicholas/Documentos/Phone-Cloud/Phone-Cloud.csproj",
         "packagesPath": "/home/nicholas/.nuget/packages/",
-        "outputPath": "/home/nicholas/Phone-Cloud/obj/",
+        "outputPath": "/home/nicholas/Documentos/Phone-Cloud/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/nicholas/.nuget/NuGet/NuGet.Config"
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }

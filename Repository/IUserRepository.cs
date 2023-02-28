@@ -14,5 +14,7 @@ namespace Phone_Cloud.Repository
 
         Task<List<User>> GetAll();
 
+        Task<User> Update(User use);
+
     }
 }

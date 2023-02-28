@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MZuLb4cMcpiErn/JYUiriH7y1/KGYiVHIFEaIu4diq4RG3sQZm6mBPpWP0qHX+MqeJKaYTHqBj9p+hMTFwIBtg==",
+  "dgSpecHash": "6tpQ5zcr+pIVhDAEboCZWRtASZ38L85a195mxM/5IUKjedXa3WX7qdZlAMMi+z5dRPRvKQtrowsF9GvnkJQs0w==",
   "success": true,
-  "projectFilePath": "/home/nicholas/Phone-Cloud/Phone-Cloud.csproj",
+  "projectFilePath": "/home/nicholas/Documentos/Phone-Cloud/Phone-Cloud.csproj",
   "expectedPackageFiles": [
     "/home/nicholas/.nuget/packages/dapper/2.0.123/dapper.2.0.123.nupkg.sha512",
     "/home/nicholas/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
